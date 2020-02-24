@@ -1,4 +1,4 @@
-package com.amazing.thing.demo.model;
+package com.amazing.thing.demo.model.user;
 
 public enum UserRoleType {
     ADMIN,

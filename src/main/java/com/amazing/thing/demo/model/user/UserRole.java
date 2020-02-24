@@ -1,4 +1,4 @@
-package com.amazing.thing.demo.model;
+package com.amazing.thing.demo.model.user;
 
 import lombok.Builder;
 import lombok.Data;
@@ -6,17 +6,17 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Data
 @Builder
-public class User {
+@Table(name = "roles")
+class UserRole {
 
     @Id
     @GeneratedValue
     private Long id;
-    private Integer age;
-    private String firstName;
-    private String lastName;
     private UserRoleType roleType;
+    private RightType roleRight;
 }
