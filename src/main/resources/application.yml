@@ -1,5 +1,10 @@
-spring:
+primary:
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=demo
+    jdbcUrl: jdbc:postgresql://localhost:5432/postgres?currentSchema=public
+    username: postgres
+    password: 111
+secondary:
+  datasource:
+    jdbcUrl: jdbc:postgresql://localhost:5432/postgres?currentSchema=demo
     username: postgres
     password: 111
