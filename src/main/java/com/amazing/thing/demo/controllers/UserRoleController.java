@@ -4,7 +4,7 @@ import com.amazing.thing.demo.model.user.UserRole;
 import com.amazing.thing.demo.services.UserRoleService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,12 +21,18 @@ public class UserRoleController {
     private UserRoleService userRoleService;
 
     @GetMapping(value = "{id}", produces = "application/json")
-    public @ResponseBody UserRole getUserRole(@PathVariable Long id) {
+    public @ResponseBody
+    UserRole getUserRole(@PathVariable Long id) {
         return userRoleService.getUserRole(id);
     }
 
     @PostMapping
-    public void createUserRole(@RequestBody UserRole userRole) {
-        userRoleService.createUserRole(userRole);
+    public @ResponseBody Long createUserRole(@RequestBody UserRole userRole) {
+        return userRoleService.createUserRole(userRole);
+    }
+
+    @DeleteMapping(value = "{id}")
+    public @ResponseBody boolean removeUserRole(@PathVariable Long id) {
+        return userRoleService.removeUserRole(id);
     }
 }

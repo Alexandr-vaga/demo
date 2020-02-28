@@ -16,11 +16,11 @@ public class UserRoleService {
         return userRoleDao.getUserRoleById(id);
     }
 
-    public void createUserRole(UserRole userRole) {
-        userRoleDao.createUserRole(userRole);
+    public Long createUserRole(UserRole userRole) {
+        return userRoleDao.createUserRole(userRole);
     }
 
-    public void removeUserRole(Long id) {
-        userRoleDao.removeUserRoleById(id);
+    public boolean removeUserRole(Long id) {
+        return userRoleDao.removeUserRoleById(id);
     }
 }
