@@ -1,6 +1,6 @@
 package com.amazing.thing.demo.model.user;
 
-public enum UserRoleType {
+public enum RoleType {
     ADMIN,
     CUSTOMER,
     MANAGER

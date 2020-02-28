@@ -5,9 +5,9 @@ import lombok.Data;
 
 @Data
 @Builder
-public class UserRole {
+public class Role {
 
     private Long id;
-    private UserRoleType roleType;
+    private RoleType roleType;
     private RightType roleRight;
 }

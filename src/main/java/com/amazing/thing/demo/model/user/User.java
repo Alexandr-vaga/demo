@@ -9,7 +9,7 @@ public class User {
 
     private Long id;
     private Integer age;
-    private String firstName;
-    private String lastName;
-    private UserRole userRole;
+    private String username;
+    private String password;
+    private Role role;
 }
